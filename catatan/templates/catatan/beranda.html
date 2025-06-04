@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Catatan</title>
+</head>
+<body>
+    <h1>Daftar Catatan</h1>
+    <ul>
+        {% for item in catatan %}
+            <li>
+                <strong>{{ item.judul }}</strong><br>
+                {{ item.isi }}<br>
+                <small>{{ item.tanggal }}</small>
+            </li>
+        {% empty %}
+            <li>Belum ada catatan.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
